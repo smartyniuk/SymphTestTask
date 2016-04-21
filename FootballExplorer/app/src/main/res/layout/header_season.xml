@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/layoutInfo"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="20dp"
+              android:animateLayoutChanges="true"
+              android:paddingLeft="35dp"
+              android:orientation="vertical"
+              tools:ignore="RtlHardcoded,RtlSymmetry,ContentDescription,RtlHardcoded,HardcodedText">
+
+
+    <GridLayout android:id="@+id/GridLayout1"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="2"
+                tools:context=".GridXMLActivity">
+
+        <TextView
+            style="@style/SeasonCardTextParametersNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Legae: "/>
+
+        <TextView
+            android:id="@+id/txtLeague"
+            style="@style/SeasonCardTextParameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BL1"/>
+
+        <TextView
+            style="@style/SeasonCardTextParametersNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Year: "/>
+
+        <TextView
+            android:id="@+id/txtYear"
+            style="@style/SeasonCardTextParameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2015"/>
+
+        <TextView
+            style="@style/SeasonCardTextParametersNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current match day: "/>
+
+        <TextView
+            android:id="@+id/txtCurrentMatchDay"
+            style="@style/SeasonCardTextParameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="31"/>
+
+        <TextView
+            style="@style/SeasonCardTextParametersNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:text="Number of match days: "/>
+
+        <TextView
+            android:id="@+id/txtNumberOfMatchDays"
+            style="@style/SeasonCardTextParameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="34"/>
+
+        <TextView
+            style="@style/SeasonCardTextParametersNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Number of teams: "/>
+
+        <TextView
+            android:id="@+id/txtNumbersOfTeams"
+            style="@style/SeasonCardTextParameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="18"/>
+
+        <TextView
+            style="@style/SeasonCardTextParametersNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Number of games: "/>
+
+        <TextView
+            android:id="@+id/txtNumberOfGames"
+            style="@style/SeasonCardTextParameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="306"/>
+
+        <TextView
+            style="@style/SeasonCardTextParametersNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last updated: "/>
+
+        <TextView
+            android:id="@+id/txtLastUpdated"
+            style="@style/SeasonCardTextParameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2016-04-20T07:00:00Z"/>
+    </GridLayout>
+
+</LinearLayout>

@@ -1,0 +1,327 @@
+[
+  {
+    "_links": {
+      "self": {
+        "href": "http://api.football-data.org/v1/soccerseasons/394"
+      },
+      "teams": {
+        "href": "http://api.football-data.org/v1/soccerseasons/394/teams"
+      },
+      "fixtures": {
+        "href": "http://api.football-data.org/v1/soccerseasons/394/fixtures"
+      },
+      "leagueTable": {
+        "href": "http://api.football-data.org/v1/soccerseasons/394/leagueTable"
+      }
+    },
+    "id": 394,
+    "caption": "1. Bundesliga 2015/16",
+    "league": "BL1",
+    "year": "2015",
+    "currentMatchday": 31,
+    "numberOfMatchdays": 34,
+    "numberOfTeams": 18,
+    "numberOfGames": 306,
+    "lastUpdated": "2016-04-20T07:00:00Z"
+  },
+  {
+    "_links": {
+      "self": {
+        "href": "http://api.football-data.org/v1/soccerseasons/395"
+      },
+      "teams": {
+        "href": "http://api.football-data.org/v1/soccerseasons/395/teams"
+      },
+      "fixtures": {
+        "href": "http://api.football-data.org/v1/soccerseasons/395/fixtures"
+      },
+      "leagueTable": {
+        "href": "http://api.football-data.org/v1/soccerseasons/395/leagueTable"
+      }
+    },
+    "id": 395,
+    "caption": "2. Bundesliga 2015/16",
+    "league": "BL2",
+    "year": "2015",
+    "currentMatchday": 30,
+    "numberOfMatchdays": 34,
+    "numberOfTeams": 18,
+    "numberOfGames": 306,
+    "lastUpdated": "2016-04-17T14:18:17Z"
+  },
+  {
+    "_links": {
+      "self": {
+        "href": "http://api.football-data.org/v1/soccerseasons/396"
+      },
+      "teams": {
+        "href": "http://api.football-data.org/v1/soccerseasons/396/teams"
+      },
+      "fixtures": {
+        "href": "http://api.football-data.org/v1/soccerseasons/396/fixtures"
+      },
+      "leagueTable": {
+        "href": "http://api.football-data.org/v1/soccerseasons/396/leagueTable"
+      }
+    },
+    "id": 396,
+    "caption": "Ligue 1 2015/16",
+    "league": "FL1",
+    "year": "2015",
+    "currentMatchday": 35,
+    "numberOfMatchdays": 38,
+    "numberOfTeams": 20,
+    "numberOfGames": 380,
+    "lastUpdated": "2016-04-20T10:00:02Z"
+  },
+  {
+    "_links": {
+      "self": {
+        "href": "http://api.football-data.org/v1/soccerseasons/397"
+      },
+      "teams": {
+        "href": "http://api.football-data.org/v1/soccerseasons/397/teams"
+      },
+      "fixtures": {
+        "href": "http://api.football-data.org/v1/soccerseasons/397/fixtures"
+      },
+      "leagueTable": {
+        "href": "http://api.football-data.org/v1/soccerseasons/397/leagueTable"
+      }
+    },
+    "id": 397,
+    "caption": "Ligue 2 2015/16",
+    "league": "FL2",
+    "year": "2015",
+    "currentMatchday": 34,
+    "numberOfMatchdays": 38,
+    "numberOfTeams": 20,
+    "numberOfGames": 380,
+    "lastUpdated": "2016-04-18T18:17:35Z"
+  },
+  {
+    "_links": {
+      "self": {
+        "href": "http://api.football-data.org/v1/soccerseasons/398"
+      },
+      "teams": {
+        "href": "http://api.football-data.org/v1/soccerseasons/398/teams"
+      },
+      "fixtures": {
+        "href": "http://api.football-data.org/v1/soccerseasons/398/fixtures"
+      },
+      "leagueTable": {
+        "href": "http://api.football-data.org/v1/soccerseasons/398/leagueTable"
+      }
+    },
+    "id": 398,
+    "caption": "Premier League 2015/16",
+    "league": "PL",
+    "year": "2015",
+    "currentMatchday": 30,
+    "numberOfMatchdays": 38,
+    "numberOfTeams": 20,
+    "numberOfGames": 380,
+    "lastUpdated": "2016-04-20T21:01:24Z"
+  },
+  {
+    "_links": {
+      "self": {
+        "href": "http://api.football-data.org/v1/soccerseasons/399"
+      },
+      "teams": {
+        "href": "http://api.football-data.org/v1/soccerseasons/399/teams"
+      },
+      "fixtures": {
+        "href": "http://api.football-data.org/v1/soccerseasons/399/fixtures"
+      },
+      "leagueTable": {
+        "href": "http://api.football-data.org/v1/soccerseasons/399/leagueTable"
+      }
+    },
+    "id": 399,
+    "caption": "Primera Division 2015/16",
+    "league": "PD",
+    "year": "2015",
+    "currentMatchday": 34,
+    "numberOfMatchdays": 38,
+    "numberOfTeams": 20,
+    "numberOfGames": 380,
+    "lastUpdated": "2016-04-20T22:18:59Z"
+  },
+  {
+    "_links": {
+      "self": {
+        "href": "http://api.football-data.org/v1/soccerseasons/400"
+      },
+      "teams": {
+        "href": "http://api.football-data.org/v1/soccerseasons/400/teams"
+      },
+      "fixtures": {
+        "href": "http://api.football-data.org/v1/soccerseasons/400/fixtures"
+      },
+      "leagueTable": {
+        "href": "http://api.football-data.org/v1/soccerseasons/400/leagueTable"
+      }
+    },
+    "id": 400,
+    "caption": "Segunda Division 2015/16",
+    "league": "SD",
+    "year": "2015",
+    "currentMatchday": 35,
+    "numberOfMatchdays": 42,
+    "numberOfTeams": 22,
+    "numberOfGames": 462,
+    "lastUpdated": "2016-04-20T07:00:06Z"
+  },
+  {
+    "_links": {
+      "self": {
+        "href": "http://api.football-data.org/v1/soccerseasons/401"
+      },
+      "teams": {
+        "href": "http://api.football-data.org/v1/soccerseasons/401/teams"
+      },
+      "fixtures": {
+        "href": "http://api.football-data.org/v1/soccerseasons/401/fixtures"
+      },
+      "leagueTable": {
+        "href": "http://api.football-data.org/v1/soccerseasons/401/leagueTable"
+      }
+    },
+    "id": 401,
+    "caption": "Serie A 2015/16",
+    "league": "SA",
+    "year": "2015",
+    "currentMatchday": 34,
+    "numberOfMatchdays": 38,
+    "numberOfTeams": 20,
+    "numberOfGames": 380,
+    "lastUpdated": "2016-04-20T21:02:04Z"
+  },
+  {
+    "_links": {
+      "self": {
+        "href": "http://api.football-data.org/v1/soccerseasons/402"
+      },
+      "teams": {
+        "href": "http://api.football-data.org/v1/soccerseasons/402/teams"
+      },
+      "fixtures": {
+        "href": "http://api.football-data.org/v1/soccerseasons/402/fixtures"
+      },
+      "leagueTable": {
+        "href": "http://api.football-data.org/v1/soccerseasons/402/leagueTable"
+      }
+    },
+    "id": 402,
+    "caption": "Primeira Liga 2015/16",
+    "league": "PPL",
+    "year": "2015",
+    "currentMatchday": 30,
+    "numberOfMatchdays": 34,
+    "numberOfTeams": 18,
+    "numberOfGames": 306,
+    "lastUpdated": "2016-04-18T06:46:03Z"
+  },
+  {
+    "_links": {
+      "self": {
+        "href": "http://api.football-data.org/v1/soccerseasons/403"
+      },
+      "teams": {
+        "href": "http://api.football-data.org/v1/soccerseasons/403/teams"
+      },
+      "fixtures": {
+        "href": "http://api.football-data.org/v1/soccerseasons/403/fixtures"
+      },
+      "leagueTable": {
+        "href": "http://api.football-data.org/v1/soccerseasons/403/leagueTable"
+      }
+    },
+    "id": 403,
+    "caption": "3. Bundesliga 2015/16",
+    "league": "BL3",
+    "year": "2015",
+    "currentMatchday": 35,
+    "numberOfMatchdays": 38,
+    "numberOfTeams": 20,
+    "numberOfGames": 380,
+    "lastUpdated": "2016-04-20T01:00:09Z"
+  },
+  {
+    "_links": {
+      "self": {
+        "href": "http://api.football-data.org/v1/soccerseasons/404"
+      },
+      "teams": {
+        "href": "http://api.football-data.org/v1/soccerseasons/404/teams"
+      },
+      "fixtures": {
+        "href": "http://api.football-data.org/v1/soccerseasons/404/fixtures"
+      },
+      "leagueTable": {
+        "href": "http://api.football-data.org/v1/soccerseasons/404/leagueTable"
+      }
+    },
+    "id": 404,
+    "caption": "Eredivisie 2015/16",
+    "league": "DED",
+    "year": "2015",
+    "currentMatchday": 32,
+    "numberOfMatchdays": 34,
+    "numberOfTeams": 18,
+    "numberOfGames": 306,
+    "lastUpdated": "2016-04-20T21:02:21Z"
+  },
+  {
+    "_links": {
+      "self": {
+        "href": "http://api.football-data.org/v1/soccerseasons/405"
+      },
+      "teams": {
+        "href": "http://api.football-data.org/v1/soccerseasons/405/teams"
+      },
+      "fixtures": {
+        "href": "http://api.football-data.org/v1/soccerseasons/405/fixtures"
+      },
+      "leagueTable": {
+        "href": "http://api.football-data.org/v1/soccerseasons/405/leagueTable"
+      }
+    },
+    "id": 405,
+    "caption": "Champions League 2015/16",
+    "league": "CL",
+    "year": "2015",
+    "currentMatchday": 8,
+    "numberOfMatchdays": 10,
+    "numberOfTeams": 32,
+    "numberOfGames": 120,
+    "lastUpdated": "2016-04-12T20:37:53Z"
+  },
+  {
+    "_links": {
+      "self": {
+        "href": "http://api.football-data.org/v1/soccerseasons/425"
+      },
+      "teams": {
+        "href": "http://api.football-data.org/v1/soccerseasons/425/teams"
+      },
+      "fixtures": {
+        "href": "http://api.football-data.org/v1/soccerseasons/425/fixtures"
+      },
+      "leagueTable": {
+        "href": "http://api.football-data.org/v1/soccerseasons/425/leagueTable"
+      }
+    },
+    "id": 425,
+    "caption": "League One 2015/16",
+    "league": "EL1",
+    "year": "2015",
+    "currentMatchday": 43,
+    "numberOfMatchdays": 46,
+    "numberOfTeams": 24,
+    "numberOfGames": 552,
+    "lastUpdated": "2016-04-19T20:47:13Z"
+  }
+]
