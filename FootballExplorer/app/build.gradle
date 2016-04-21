@@ -36,6 +36,7 @@ dependencies {
     compile 'com.android.support:percent:23.3.0'
 
     compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.google.guava:guava:18.0'
 
     //third-party
     compile 'org.glassfish:javax.annotation:10.0-b28'

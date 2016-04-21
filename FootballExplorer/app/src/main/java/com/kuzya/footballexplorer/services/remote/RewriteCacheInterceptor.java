@@ -12,7 +12,8 @@ public class RewriteCacheInterceptor implements Interceptor {
     @Override
     public Response intercept(Chain chain) throws IOException {
         Response originalResponse = chain.proceed(chain.request());
-        int maxAge = 60;
+        int maxAge = 300;
+
         return originalResponse.newBuilder()
                 .header("Cache-Control", "public, max-age=" + maxAge)
                 .build();

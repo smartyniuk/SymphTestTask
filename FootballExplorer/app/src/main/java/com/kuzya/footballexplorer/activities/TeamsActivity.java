@@ -15,29 +15,28 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.common.eventbus.Subscribe;
 import com.kuzya.footballexplorer.R;
 import com.kuzya.footballexplorer.model.season.SeasonsModel;
 import com.kuzya.footballexplorer.model.team.Team;
-import com.kuzya.footballexplorer.model.team.TeamsModel;
+import com.kuzya.footballexplorer.services.remote.FootballService;
 import com.kuzya.footballexplorer.ui.TeamItemsDecoration;
 import com.kuzya.footballexplorer.ui.TeamsAdapter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class TeamsActivity extends BaseActivity {
     public static final String SEASON_ID = "season_id";
+
     private static final Logger mLogger = LoggerFactory.getLogger(TeamsActivity.class);
+
     @Bind(R.id.toolbar)
     protected Toolbar mToolbar;
     @Bind(R.id.recyclerView)
@@ -114,9 +113,21 @@ public class TeamsActivity extends BaseActivity {
 
         layoutSeasonHeader.setVisibility(View.INVISIBLE);
         collapsingToolbar.setTitle("");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mFootballService.eventBus.register(this);
 
         loadSeasonInfo(mSeasonId);
         loadTeams(mSeasonId);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mFootballService.eventBus.unregister(this);
     }
 
     @Override
@@ -135,67 +146,42 @@ public class TeamsActivity extends BaseActivity {
     }
 
     private void loadSeasonInfo(String seasonId) {
-        Call<SeasonsModel> call = _mBackendAPI.getSeasonInfo(seasonId);
-        call.enqueue(new Callback<SeasonsModel>() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public void onResponse(Call<SeasonsModel> call, Response<SeasonsModel> response) {
-                Boolean isSuccessful = response.isSuccessful();
-                if (isSuccessful) {
-                    SeasonsModel seasonsModel = response.body();
-                    layoutSeasonHeader.setVisibility(View.VISIBLE);
-                    collapsingToolbar.setTitle(seasonsModel.getCaption());
-                    txtCurrentMatchDay.setText(seasonsModel.getCurrentMatchday().toString());
-                    txtLastUpdated.setText(seasonsModel.getLastUpdated().replace("T", " ").replace("Z", " "));
-                    txtLeague.setText(seasonsModel.getLeague());
-                    txtNumberOfGames.setText(seasonsModel.getNumberOfGames().toString());
-                    txtNumberOfMatchDays.setText(seasonsModel.getNumberOfMatchdays().toString());
-                    txtNumbersOfTeams.setText(seasonsModel.getNumberOfTeams().toString());
-                    txtYear.setText(seasonsModel.getYear());
-                } else {
-                    try {
-                        onError(response.errorBody().string());
-                    } catch (IOException e) {
-                        onError(e.toString());
-                    }
-                }
-            }
+        mFootballService.getSeasonInfo(seasonId);
+    }
 
-            @Override
-            public void onFailure(Call<SeasonsModel> call, Throwable t) {
-                onError("Request failed: " + call.request().url());
-            }
-        });
+    @SuppressLint("SetTextI18n")
+    @Subscribe
+    public void onSeasonInfoLoaded(FootballService.LoadSeasonInfoEvent event) {
+        if (event.isError())
+            return;
+
+        SeasonsModel seasonsModel = event.getSeasonInfo();
+        layoutSeasonHeader.setVisibility(View.VISIBLE);
+        collapsingToolbar.setTitle(seasonsModel.getCaption());
+        txtCurrentMatchDay.setText(seasonsModel.getCurrentMatchday().toString());
+        txtLastUpdated.setText(seasonsModel.getLastUpdated().replace("T", " ").replace("Z", " "));
+        txtLeague.setText(seasonsModel.getLeague());
+        txtNumberOfGames.setText(seasonsModel.getNumberOfGames().toString());
+        txtNumberOfMatchDays.setText(seasonsModel.getNumberOfMatchdays().toString());
+        txtNumbersOfTeams.setText(seasonsModel.getNumberOfTeams().toString());
+        txtYear.setText(seasonsModel.getYear());
     }
 
     private void loadTeams(String seasonId) {
-        Call<TeamsModel> call = _mBackendAPI.listTeams(seasonId);
-        call.enqueue(new Callback<TeamsModel>() {
-            @Override
-            public void onResponse(Call<TeamsModel> call, Response<TeamsModel> response) {
-                Boolean isSuccessful = response.isSuccessful();
+        mFootballService.listTeams(seasonId);
+    }
 
-                if (isSuccessful) {
-                    List<Team> teams = response.body().getTeams();
-                    mTeamsList.clear();
-                    mTeamsList.addAll(teams);
-                    mAdapter.notifyDataSetChanged();
-                } else {
-                    try {
-                        onError(response.errorBody().string());
-                    } catch (IOException e) {
-                        onError(e.toString());
-                    }
-                }
+    @Subscribe
+    public void onTeamsLoaded(FootballService.LoadTeamsEvent event) {
+        mSwipeContainer.setRefreshing(false);
 
-                mSwipeContainer.setRefreshing(false);
-            }
+        if (event.isError())
+            return;
 
-            @Override
-            public void onFailure(Call<TeamsModel> call, Throwable t) {
-                onError("Request failed: " + call.request().url());
-            }
-        });
+        List<Team> teams = event.getTeamsMosel().getTeams();
+        mTeamsList.clear();
+        mTeamsList.addAll(teams);
+        mAdapter.notifyDataSetChanged();
     }
 
     private void onError(String msg) {

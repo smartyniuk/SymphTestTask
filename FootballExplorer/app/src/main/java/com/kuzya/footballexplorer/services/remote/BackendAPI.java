@@ -16,6 +16,8 @@ import retrofit2.http.Path;
  */
 public interface BackendAPI {
 
+    //TODO use one client for whole app or add header in Interceptor
+
     @Headers("X-Auth-Token:" + Const.AUTH_TOKEN)
     @GET("soccerseasons")
     Call<List<SeasonsModel>> listSeasons();

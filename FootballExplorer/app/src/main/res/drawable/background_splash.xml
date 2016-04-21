@@ -10,7 +10,8 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/ic_app_logo"/>
+            android:src="@drawable/ic_ball"
+            android:tileMode="disabled"/>
     </item>
 
 </layer-list>

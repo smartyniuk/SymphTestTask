@@ -6,6 +6,7 @@ import com.kuzya.footballexplorer.Const;
 import com.kuzya.footballexplorer.services.local.DBLocalStorage;
 import com.kuzya.footballexplorer.services.local.ILocalStorage;
 import com.kuzya.footballexplorer.services.remote.BackendAPI;
+import com.kuzya.footballexplorer.services.remote.FootballService;
 import com.kuzya.footballexplorer.services.remote.RewriteCacheInterceptor;
 
 import javax.inject.Inject;
@@ -24,7 +25,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module
 public class StorageModule {
 
-
     @Inject
     @Provides
     @Singleton
@@ -35,9 +35,9 @@ public class StorageModule {
                 .cache(cache)
                 .addInterceptor(new RewriteCacheInterceptor())
 
-                //For local testing
-                //{"error":"You reached your request limit. Get your free API token to use the API extensively."}
-                //.addInterceptor(new LocalResponseInterceptor(context))
+//                For local testing
+//                {"error":"You reached your request limit. Get your free API token to use the API extensively."}
+//                .addInterceptor(new LocalResponseInterceptor(context))
                 .build();
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -47,6 +47,13 @@ public class StorageModule {
                 .build();
 
         return retrofit.create(BackendAPI.class);
+    }
+
+    @Inject
+    @Provides
+    @Singleton
+    FootballService provideFootballService(Context context, BackendAPI api) {
+        return new FootballService(api, context);
     }
 
     @Provides

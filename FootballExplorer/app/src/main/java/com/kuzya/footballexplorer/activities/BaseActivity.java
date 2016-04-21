@@ -8,7 +8,7 @@ import com.kuzya.footballexplorer.FootballExplorerApplication;
 import com.kuzya.footballexplorer.R;
 import com.kuzya.footballexplorer.services.StorageComponent;
 import com.kuzya.footballexplorer.services.local.ILocalStorage;
-import com.kuzya.footballexplorer.services.remote.BackendAPI;
+import com.kuzya.footballexplorer.services.remote.FootballService;
 
 import javax.inject.Inject;
 
@@ -16,8 +16,9 @@ import javax.inject.Inject;
  * Created by kuzya on 21.04.2016.
  */
 public class BaseActivity extends AppCompatActivity {
+
     @Inject
-    protected BackendAPI _mBackendAPI;
+    protected FootballService mFootballService;
     @Inject
     protected ILocalStorage mLocalStorageService;
 

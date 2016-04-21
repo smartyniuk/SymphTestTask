@@ -2,13 +2,13 @@
 <android.support.v7.widget.CardView
     android:id="@+id/cardView"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/card_margin"
     android:layout_marginLeft="@dimen/card_margin"
     android:layout_marginRight="@dimen/card_margin"
-    tools:ignore="RtlHardcoded,RtlSymmetry,ContentDescription,RtlHardcoded,HardcodedText"
-    xmlns:tools="http://schemas.android.com/tools">
+    tools:ignore="RtlHardcoded,RtlSymmetry,ContentDescription,RtlHardcoded,HardcodedText">
 
     <LinearLayout
         style="@style/Widget.CardContent"

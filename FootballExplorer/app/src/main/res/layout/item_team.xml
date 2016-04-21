@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout android:id="@+id/layoutItem"
+                xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/layoutItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:gravity="center"
                 tools:ignore="RtlHardcoded,RtlSymmetry,ContentDescription,RtlHardcoded,HardcodedText">
 
     <ImageView
         android:id="@+id/imgTeamIcon"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="#f4f3f4"
@@ -21,8 +22,8 @@
         android:id="@+id/txtTeamName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/imgTeamIcon"
         android:layout_toEndOf="@id/imgTeamIcon"
+        android:layout_toRightOf="@id/imgTeamIcon"
         android:paddingLeft="10dp"
         android:paddingStart="10dp"
         android:text="Aston Villa FC"
@@ -35,8 +36,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtTeamName"
-        android:layout_toRightOf="@id/imgTeamIcon"
         android:layout_toEndOf="@id/imgTeamIcon"
+        android:layout_toRightOf="@id/imgTeamIcon"
         android:paddingLeft="10dp"
         android:paddingStart="10dp"
         android:text="114,750,000 €"/>

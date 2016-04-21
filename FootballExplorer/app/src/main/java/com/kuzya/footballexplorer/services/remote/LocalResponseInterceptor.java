@@ -20,6 +20,8 @@ import okio.Buffer;
  * Created by kuzya on 21.04.2016.
  */
 @SuppressWarnings("ALL")
+//                For local testing
+//                {"error":"You reached your request limit. Get your free API token to use the API extensively."}
 public class LocalResponseInterceptor implements Interceptor {
 
     private final Context context;

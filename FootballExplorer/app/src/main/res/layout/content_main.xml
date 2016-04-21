@@ -7,8 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_main"
-    tools:ignore="RtlHardcoded,RtlSymmetry,ContentDescription,RtlHardcoded,HardcodedText">
+    tools:ignore="RtlHardcoded,RtlSymmetry,ContentDescription,RtlHardcoded,HardcodedText"
+    tools:showIn="@layout/activity_main">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
